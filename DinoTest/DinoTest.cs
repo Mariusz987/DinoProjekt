@@ -26,5 +26,23 @@ namespace DinoTest
            
 
         }
+ [TestMethod]
+        public void dobreZnaki2()
+        {
+            //Arrange
+            string wartosc = "85";
+            string oczekiwana = "85";
+            Dinozaur dinozaur = new Dinozaur();
+
+            //Act
+            dinozaur.Dlugosc = wartosc;
+            Dinozaur.sprawdzZnaki(ref wartosc);
+
+
+            //Assert
+            Assert.AreEqual(oczekiwana, wartosc);
+
+
+        }
     }
 }
