@@ -1,0 +1,124 @@
+﻿<Window x:Class="DinoProject.DrapieznikiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DinoProject"
+        mc:Ignorable="d"
+        Title="Mięsożerne" Height="500" Width="900" Icon="pack://application:,,,/obrazki/dinoIcon.png" ResizeMode="NoResize">
+    <Grid>
+        <Image Source="pack://application:,,,/obrazki/tloDrapiezniki.jpg" Stretch="Fill" x:Name="tlo"/>
+        <Canvas>
+
+            <Image x:Name="tRex" Source="pack://application:,,,/obrazki/tRex.png" Width="157" Canvas.Left="228" Canvas.Top="289" MouseEnter="TRex_MouseEnter" Height="138" />
+            <Image x:Name="spinosaurus"  Width="154" Canvas.Left="167" Canvas.Top="191" Source="pack://application:,,,/obrazki/spinosaurus.png" MouseEnter="Spinosaurus_MouseEnter" Height="157" />
+            <Image x:Name="guanlong" Source="pack://application:,,,/obrazki/guanlong2.png" Width="169" Canvas.Top="191" Canvas.Left="547"  MouseEnter="Guanlong_MouseEnter" Height="157" />
+            <Image x:Name="pterosaurus"  Width="165" Canvas.Left="175" Canvas.Top="10" Source="pack://application:,,,/obrazki/pterosaurus.png" MouseEnter="Pterosaurus_MouseEnter" Height="151"/>
+            <Image x:Name="velociraptorV"  Width="120" Canvas.Left="587" Canvas.Top="325" Source="pack://application:,,,/obrazki/velociraptorV.png" MouseEnter="Velociraptor_MouseEnter" />
+
+
+            <Border x:Name="borderTrex" BorderBrush="Beige" BorderThickness="2" Canvas.Left="167" Canvas.Top="121" Visibility="Hidden" MouseLeave="BorderTRex_MouseLeave" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="opisTrex" Grid.Column="0" Grid.RowSpan="2" Text="Rex" Width="185"  Foreground="BlueViolet" FontWeight="DemiBold" Padding="5" Canvas.Left="195" Canvas.Top="184" Opacity="0.8" Background="Wheat" TextWrapping="Wrap"/>
+                    <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+                        <Image Source="pack://application:,,,/obrazki/TRexV.png"  Width="150" Margin="20" />
+                    </Grid>
+ 
+                    <TextBlock x:Name="detaleTrex" Grid.Column="1" Grid.Row="1" Text="test" Padding="5" Opacity="0.8" Background="Wheat" Foreground="BlueViolet" FontWeight="DemiBold"/>
+                </Grid>
+            </Border>
+            <Border x:Name="borderVelociraptor" BorderBrush="Beige" BorderThickness="2" Canvas.Left="506" Canvas.Top="141" Visibility="Hidden" MouseLeave="BorderVelociraptor_MouseLeave" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="opisVelociraptor" Grid.Column="0" Grid.RowSpan="4" Text="velociraptor" Width="150" Foreground="BlueViolet" FontWeight="DemiBold" Padding="5" Opacity="0.8" Background="Wheat" TextWrapping="WrapWithOverflow"/>
+                    <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+                        <Image Source="pack://application:,,,/obrazki/velociraptorV.png"  Width="150" Margin="20" />
+                    </Grid>
+                    <TextBlock x:Name="detaleVelociraptor" Grid.Column="1" Grid.Row="1" Text="test" Padding="5" Opacity="0.8" Background="Wheat" Foreground="BlueViolet" FontWeight="DemiBold"/>
+                </Grid>
+            </Border>
+            <Border x:Name="borderGuanlong" BorderBrush="Beige" BorderThickness="2" Canvas.Left="454" Canvas.Top="60" Visibility="Hidden" MouseLeave="BorderGuanlong_MouseLeave" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="opisGuanlong" Grid.Column="0" Grid.RowSpan="4" Text="guanlong" Width="150" Foreground="BlueViolet" FontWeight="DemiBold" Padding="5" Opacity="0.8" Background="Wheat" TextWrapping="WrapWithOverflow"/>
+                    <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+                        <Image Source="pack://application:,,,/obrazki/guanlong2.png"  Width="150" Margin="20" />
+                    </Grid>
+                    
+                    <TextBlock x:Name="detaleGuanlong" Grid.Column="1" Grid.Row="1" Text="test" Padding="5" Opacity="0.8" Background="Wheat" Foreground="BlueViolet" FontWeight="DemiBold"/>
+                </Grid>
+            </Border>
+            <Border x:Name="borderSpinosaurus" BorderBrush="Beige" BorderThickness="2" Canvas.Left="122" Canvas.Top="60" Visibility="Hidden" MouseLeave="BorderSpinosaurus_MouseLeave" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="opisSpinosaurus" Grid.Column="0" Grid.RowSpan="2" Text="Rex" Width="120"  Foreground="BlueViolet" FontWeight="DemiBold" Padding="5" Canvas.Left="195" Canvas.Top="184" Opacity="0.8" Background="Wheat" TextWrapping="Wrap"/>
+                    <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+                        <Image Source="pack://application:,,,/obrazki/spinosaurusV.png"  Width="150" Margin="20" />
+                    </Grid>
+                  
+                    <TextBlock x:Name="detaleSpinosaurus" Grid.Column="1" Grid.Row="1" Text="test" Padding="5" Opacity="0.8" Background="Wheat" Foreground="BlueViolet" FontWeight="DemiBold"/>
+                </Grid>
+            </Border>
+            <Border x:Name="borderPterosaurus" BorderBrush="Beige" BorderThickness="2" Canvas.Left="167" Canvas.Top="10" Visibility="Hidden" MouseLeave="BorderPterosaurus_MouseLeave"  >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="opisPterosaurus" Grid.Column="0" Grid.RowSpan="2" Text="Rex" Width="140"  Foreground="BlueViolet" FontWeight="DemiBold" Padding="5" Canvas.Left="195" Canvas.Top="184" Opacity="0.8" Background="Wheat" TextWrapping="Wrap"/>
+                    <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+                        <Image Source="pack://application:,,,/obrazki/pterosaurusV.png"  Width="150" Margin="20" />
+                    </Grid>
+                    
+                    <TextBlock x:Name="detalePterosaurus" Grid.Column="1" Grid.Row="1" Text="test" Padding="5" Opacity="0.8" Background="Wheat" Foreground="BlueViolet" FontWeight="DemiBold"/>
+                </Grid>
+            </Border>
+
+            <Button Content="Powrót" Padding="5" Canvas.Left="818" Canvas.Top="22" Foreground="BlueViolet" FontWeight="Bold" Click="Button_Powrot" />
+        </Canvas>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="DinoProject.StworzDino"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DinoProject"
+        mc:Ignorable="d"
+        Title="StworzDino" Height="450" Width="700" Icon="pack://application:,,,/obrazki/dinoIcon.png" Background="#043927" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450*" />
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="pokaz" Grid.Column="1" TextWrapping="Wrap" Foreground="#c7ea46" FontSize="17" Padding="20">
+                Uzupełni dane a zostanie utworzony <LineBreak/> wymyślony przez ciebie Dinozaur!
+            </TextBlock>
+            <Canvas x:Name="canvasObraz" Grid.Column="1" Grid.Row="1" >
+                <Image x:Name="dino" Width="111" Canvas.Top="10" Canvas.Left="112" Source="pack://application:,,,/obrazki/bronto.png" Height="178"/>
+            </Canvas>
+        </Grid>
+
+        <TextBlock Padding="5" HorizontalAlignment="Left" Margin="10,10,-18,0" FontSize="20" VerticalAlignment="Top" Width="800" Foreground="#c7ea46">
+            Stwórz swojego dinozaura <LineBreak /> i zobacz do jakiego radzaju należy!</TextBlock>
+        <Label Content="Podaj imię:" HorizontalAlignment="Left" Margin="15,108,0,0" Foreground="#c7ea46" FontSize="15" VerticalAlignment="Top" Height="30" Width="156"/>
+        <TextBox  x:Name="imie" HorizontalAlignment="Left" Height="23" Margin="159,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Podaj długość:" HorizontalAlignment="Left" Margin="15,143,0,0" Foreground="#c7ea46" FontSize="15" VerticalAlignment="Top" Height="30" Width="134"/>
+        <TextBox x:Name="dlugosc" HorizontalAlignment="Left" Height="23" Margin="159,151,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.512,2.355"/>
+        <Label Content="Podaj wagę:" HorizontalAlignment="Left" Margin="15,187,0,0" Foreground="#c7ea46" FontSize="15" VerticalAlignment="Top" Height="30" Width="134"/>
+        <TextBox x:Name="waga" HorizontalAlignment="Left" Height="23" Margin="159,194,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.512,2.355"/>
+        <Label Content="Gatunek: " HorizontalAlignment="Left" Margin="15,236,0,0" Foreground="#c7ea46" FontSize="15" VerticalAlignment="Top" RenderTransformOrigin="0.493,2.259" Height="30" Width="73"/>
+
+        <Button Content="Stwórz!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30"  Margin="159,314,0,0" Background="LawnGreen" FontWeight="Heavy" Click="Button_Click"  />
+        <Button Content="Powrót" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30"  Margin="159,360,0,0" Background="LawnGreen" FontWeight="Heavy" Click="Button_Powrot"  />
+
+        <ComboBox Margin="159,236,88,153" Text="Dino" x:Name="lista"/>
+    </Grid>
+</Window>

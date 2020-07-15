@@ -1,0 +1,40 @@
+﻿<Window x:Class="DinoProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DinoProject"
+        mc:Ignorable="d"
+        
+        Title="DinoWorld" Icon="pack://application:,,,/obrazki/dinoIcon.png" Height="550" Width="500" Background="#043927" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center"  FontFamily="Arial" FontSize="17" Foreground="White" Margin="0 40">Witaj w świecie Dinozaurów!</TextBlock>
+        <Image x:Name="tlo2" Source="pack://application:,,,/obrazki/dinomain.png" Stretch="Fill" />
+
+        <StackPanel HorizontalAlignment="Right" >
+            <ListView  FontFamily="Arial" FontSize="13" Foreground="White" BorderBrush="Transparent" Background="Transparent" FontWeight="Bold" Margin="70">
+                <ListViewItem Height="30" Margin="20 20 0 0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="pack://application:,,,/obrazki/drapieznik.png" Height="20" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="textBlock" Padding="5" Text="Mięsożerne" VerticalAlignment="Center" MouseLeftButtonDown="Drapizniki_MouseRightButtonDown" />
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="30" Margin="20 20 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="pack://application:,,,/obrazki/brachiosaurus.png" Height="20" VerticalAlignment="Center"/>
+                        <TextBlock Padding="5" Text="Roślinożerne" VerticalAlignment="Center" MouseLeftButtonDown="Roslinozerne_MouseRightButtonDown"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="30" Margin="20 20 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="pack://application:,,,/obrazki/bronto.png" Height="25" VerticalAlignment="Center"/>
+                        <TextBlock Padding="5" Text="Stwórz Dinozaura" VerticalAlignment="Center" MouseLeftButtonDown="Stworz_MouseLeftButtonDown"/>
+                    </StackPanel>
+                </ListViewItem>
+              
+            </ListView>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
