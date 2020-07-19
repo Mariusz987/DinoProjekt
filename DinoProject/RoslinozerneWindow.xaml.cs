@@ -23,6 +23,11 @@ namespace DinoProject
     {
         
         Dinozaur[] tabRoslinnych = new Dinozaur[4];
+		
+		/// <summary>
+        /// Konstruktor <c> RoslinnozerneWindow</c> inicjalizuje
+		/// pola klasy Miesozerca danymi z plików tekstowych
+        /// </summary>
       
         public RoslinozerneWindow()
         {
@@ -40,58 +45,80 @@ namespace DinoProject
             }
 
         }
-        /// <summary>
-        /// Ta metody obsługują zdarzenie, które poprzez
-        /// wskazanie kursorem myszki pokazuje informacje
-        /// o wskazanym obiekcie.
+         /// <summary>
+        /// Metoda <c>Brachiosaurus_MouseEnter</c> wywołuje statyczną metodę z klasy Dinozaur,
+		/// która wyświetl informacje o dinozaurze
         /// </summary>
-        private void Brachiosaurus_MouseEnter(object sender, MouseEventArgs e)
+        public void Brachiosaurus_MouseEnter(object sender, MouseEventArgs e)
         {
             Dinozaur.PokazInformacje(0, detaleBrachiosaurus, opisBrachiosaurus, borderBrachiosaurus, tabRoslinnych);
         }
+		/// <summary>
+        /// Metoda <c>Parasaurolophus_MouseEnter</c> wywołuje statyczną metodę z klasy Dinozaur,
+		/// która wyświetl informacje o dinozaurze
+        /// </summary>
 
-        private void Parasaurolophus_MouseEnter(object sender, MouseEventArgs e)
+        public void Parasaurolophus_MouseEnter(object sender, MouseEventArgs e)
         {
             Dinozaur.PokazInformacje(2, detaleParasaurolophus, opisParasaurolophus, borderParasaurolophus, tabRoslinnych);
         }
-
-        private void Triceratops_MouseEnter(object sender, MouseEventArgs e)
+		/// <summary>
+        /// Metoda <c>Triceratops_MouseEnter</c> wywołuje statyczną metodę z klasy Dinozaur,
+		/// która wyświetl informacje o dinozaurze
+        /// </summary>
+        public void Triceratops_MouseEnter(object sender, MouseEventArgs e)
         {
             Dinozaur.PokazInformacje(1, detaleTriceratops, opisTriceratops, borderTriceratops, tabRoslinnych);
         }
-
-        private void Ouranosaurus_MouseEnter(object sender, MouseEventArgs e)
+		/// <summary>
+        /// Metoda <c>Ouranosaurus_MouseEnter</c> wywołuje statyczną metodę z klasy Dinozaur,
+		/// która wyświetl informacje o dinozaurze
+        /// </summary>
+        public void Ouranosaurus_MouseEnter(object sender, MouseEventArgs e)
         {
             Dinozaur.PokazInformacje(3, detaleOuranosaurus, opisOuranosaurus, borderOuranosaurus, tabRoslinnych);
         }
 
-        /// <summary>
-        /// Ta metoda obsługuje zdarzenie, które powoduje
-        /// ukrycie wcześniej pokazanych informacji
+         /// <summary>
+		/// Metoda <c>BorderBrachiosaurus_MouseLeave</c> ukrywa informacje o Dinozaurze
+		/// po wyjechaniu kursorem poza ramkę
         /// </summary>
-        private void BorderBrachiosaurus_MouseLeave(object sender, MouseEventArgs e)
+        public void BorderBrachiosaurus_MouseLeave(object sender, MouseEventArgs e)
         {
             borderBrachiosaurus.Visibility = Visibility.Hidden;
         }
-
-        private void BorderTriceratops_MouseLeave(object sender, MouseEventArgs e)
+		/// <summary>
+		/// Metoda <c>BorderTriceratops_MouseLeave</c> ukrywa informacje o Dinozaurze
+		/// po wyjechaniu kursorem poza ramkę
+        /// </summary>
+        public void BorderTriceratops_MouseLeave(object sender, MouseEventArgs e)
         {
             borderTriceratops.Visibility = Visibility.Hidden;
         }
-
-        private void BorderParasaurolophus_MouseLeave(object sender, MouseEventArgs e)
+		/// <summary>
+		/// Metoda <c>BorderParasaurolophus_MouseLeave</c> ukrywa informacje o Dinozaurze
+		/// po wyjechaniu kursorem poza ramkę
+        /// </summary>
+        public void BorderParasaurolophus_MouseLeave(object sender, MouseEventArgs e)
         {
             borderParasaurolophus.Visibility = Visibility.Hidden;
         }
-
-        private void BorderOuranosaurus_MouseLeave(object sender, MouseEventArgs e)
+		/// <summary>
+		/// Metoda <c>BorderOuranosaurus_MouseLeave</c> ukrywa informacje o Dinozaurze
+		/// po wyjechaniu kursorem poza ramkę
+        /// </summary>
+        public void BorderOuranosaurus_MouseLeave(object sender, MouseEventArgs e)
         {
             borderOuranosaurus.Visibility = Visibility.Hidden;
         }
         /// <summary>
         /// Umożliwia przejście do okienka głownego.
         /// </summary>
-        private void Button_Powrot(object sender, RoutedEventArgs e)
+		
+        /// <summary>
+        /// Metoda <c> Button_Powrot</c> Umożliwia przejście do okienka głownego.
+        /// </summary>
+        public void Button_Powrot(object sender, RoutedEventArgs e)
         {
             this.Close();
             MainWindow main = new MainWindow();
