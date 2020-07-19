@@ -26,9 +26,13 @@ namespace DinoProject
         /// <value>Właściwość <c>Rzad</c> przechowuje rzad, do którego należy dinozaur.</value>
         public string Rzad { get; set; }
 
-        /// <summary>Konstruktor inicjalizuje obiekt Dinozaur parametrami
-        ///    (<paramref name="nazwa"/>,<paramref name="nazwanaukowa"/>,<paramref name="masa"/>,
-        ///     <paramref name="wzrost"/>),<paramref name="dlugosc"/>,<paramref name="rzad"/>.</summary>
+        /// <summary>Konstruktor inicjalizuje obiekt Dinozaur parametram</summary>
+		/// <param><c>nazwa</c> ustawia nazwę dinozaura.</param>
+        /// <param><c>nazwanaukowa</c> ustawia nazwę naukową dinozaura.</param>
+        /// <param><c>masa</c> ustawia masę dnozura.</param>
+        /// <param><c>wzrost</c> ustawia wzorst.</param>
+        /// <param><c>dlugosc</c> ustawia długość.</param>
+		/// <param><c>rzad</c> ustawia rząd dinozaura.</param>
      
         public Dinozaur(string nazwa, string nazwanaukowa, string masa,string wzrost, string dlugosc, string rzad)
         {
@@ -47,7 +51,7 @@ namespace DinoProject
         /// <param><c>textDetale</c> przechwytuje informacje, które będą później wyświetlone.</param>
         /// <param><c>textOpis</c> przyjmuję informacje na temat opisu.</param>
         /// <param><c>border</c> ustawia element border, jako widoczny.</param>
-        /// <param><c>tabDino</c>przechowuje obiekty typu Dinozaur.</param>
+        /// <param><c>tabDino</c> przechowuje obiekty typu Dinozaur.</param>
         static public void PokazInformacje(int nrDrapiznika, TextBlock textDetale, TextBlock textOpis, Border border, Dinozaur [] tabDino)
         {
             textDetale.Text = "Nazwa: " + tabDino[nrDrapiznika].Nazwa + "\n" +
@@ -68,6 +72,7 @@ namespace DinoProject
         }
         /// <summary>Metoda sprawdza, czy przesłany parametr jest liczbą
         /// jeśli nie ustawia wartość domyślną
+		///<param><c>znaki</c> pobiera znak do sprawdzenia.</param>
         /// <example>Na przykład:
         /// <code>
         ///    string znak = "4o4";
