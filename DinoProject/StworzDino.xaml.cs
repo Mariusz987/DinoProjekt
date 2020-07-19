@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace DinoProject
 {
     /// <summary>
-    /// Klasa umożliwiająca użytkownikowi stworzenie Dinozaura
+    /// Klasa  <c> StwórzDino</c> umożliwiająca użytkownikowi stworzenie Dinozaura
     /// </summary>
     public partial class StworzDino : Window
     {
@@ -43,10 +43,10 @@ namespace DinoProject
             lista.ItemsSource = nazwyDino;
         }
         /// <summary>
-        /// Ta metoda obsługuje zdarzenie, które poprzez
+        /// Ta metoda  <c>Button_Click</c> obsługuje zdarzenie, które poprzez
         /// kliknięcie, tworzy nowego dinozaura.
         /// </summary>
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
 
             string dl = dlugosc.Text;
@@ -115,9 +115,9 @@ namespace DinoProject
 
         }
         /// <summary>
-        /// Umożliwia przejście do okienka głownego.
+        /// Metoda <param><c>Button_Click</c></param> Umożliwia przejście do okienka głownego.
         /// </summary>
-        private void Button_Powrot(object sender, RoutedEventArgs e)
+        public void Button_Powrot(object sender, RoutedEventArgs e)
         {
             this.Close();
             MainWindow main = new MainWindow();
