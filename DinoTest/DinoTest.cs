@@ -17,7 +17,7 @@ namespace DinoTest
             Dinozaur dinozaur = new Dinozaur();
 
             //Act
-            dinozaur.Dlugosc = wartosc;
+            
             Dinozaur.sprawdzZnaki(ref wartosc);
             
             
