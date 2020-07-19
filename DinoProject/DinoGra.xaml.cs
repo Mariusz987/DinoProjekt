@@ -20,9 +20,14 @@ namespace DinoProject
     /// </summary>
     public partial class DinoGra : Window
     {
-        DispatcherTimer gameTimer = new DispatcherTimer();
+        
+		/// <summary>Zmienne <c>graczKw, podlozeKw, przeszkodaKw</c> posłużą
+        /// do umieszczenia grafik i wykrywania kolizji .</summary>
+		DispatcherTimer gameTimer = new DispatcherTimer();
 
-        Rect graczKw;
+        
+        
+		Rect graczKw;
         Rect podlozeKw;
         Rect przeszkodaKw;
 
@@ -43,6 +48,8 @@ namespace DinoProject
         int[] przeszkodaPozycja = { 320, 310, 300, 305, 315 };
 
         int wynik = 0;
+		
+		/// <summary>Konstruktor <c>DinoGra</c> inicjalizuje elementy gry.</summary>
         public DinoGra()
         {
             InitializeComponent();
@@ -52,9 +59,9 @@ namespace DinoProject
             GraStart();
         }
         /// <summary>
-        /// Metoda ta wznawia grę po skuciu
+        /// Metoda <c> Canvas_KeyDown</c> ta wznawia grę po skuciu
         /// </summary>
-        private void Canvas_KeyDown(object sender, KeyEventArgs e)
+        public void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter && koniecGry)
             {
@@ -63,10 +70,10 @@ namespace DinoProject
 
         }
         /// <summary>
-        /// Metoda przechwytuje naciśnięcie klawisza spacji
+        /// Metoda <c> Canvas_KeyUp</c> przechwytuje naciśnięcie klawisza spacji
         /// i tym samy umożliwia skok
         /// </summary>
-        private void Canvas_KeyUp(object sender, KeyEventArgs e)
+        public void Canvas_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space && !skok && Canvas.GetTop(gracz) > 260)
             {
@@ -76,10 +83,10 @@ namespace DinoProject
             }
         }
         /// <summary>
-        /// Metoda ustawia pozycje początkową gracza a także przeszkody
+        /// Metoda  <c> GraStart</c> ustawia pozycje początkową gracza a także przeszkody
         /// ustawie skok na false - gracz nie sakcze
         /// </summary>
-        private void GraStart()
+        public void GraStart()
         {
           
             Canvas.SetLeft(gracz, 110);
@@ -99,11 +106,11 @@ namespace DinoProject
             gameTimer.Start();
         }
         /// <summary>
-        /// Metoda odpowiedzialna za logikę gry,
+        /// Metoda  <c> graLogika</c> odpowiedzialna za logikę gry,
         /// sprawdza kolizję między graczem a przeszkodą
         /// ustawia parametry skoku
         /// </summary>
-        private void graLogika(Object sender, EventArgs e)
+        public void graLogika(Object sender, EventArgs e)
         {
 
             Canvas.SetTop(gracz, Canvas.GetTop(gracz) + szybkosc);
@@ -155,9 +162,9 @@ namespace DinoProject
             }
         }
         /// <summary>
-        /// Umożliwia przejście do okienka DinoGra.
+        /// Metoda  <c> Button_Powrot </c> umożliwia przejście do okienka DinoGra.
         /// </summary>
-        private void Button_Powrot(object sender, RoutedEventArgs e)
+        public void Button_Powrot(object sender, RoutedEventArgs e)
         {
             this.Close();
             MainWindow mainWindow = new MainWindow();
